@@ -17,6 +17,7 @@
     <title>Barbershop</title>
   </head>
   <body>
+    <!--Section header-->
     <header>
       <div class="header-container">
         <div class="logo">
@@ -24,18 +25,81 @@
         </div>
         <div class="header-nav">
           <ul>
-            <li>Appoitment</li>
-            <li>Gallery</li>
-            <li>Services</li>
-            <li>Team</li>
-            <li>Reviews</li>
-            <li>Contact</li>
+            <li>
+              <a href="#">Appoitment</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#team">Team</a>
+            </li>
+            <li>
+              <a href="#">Reviews</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
     </header>
+    <!--Gallery-->
+    <section class="gallery container" id="gallery">
+      <div class="gallery-flex">
+        <div class="gallery-card">
+          <img src="./images/card1.jpeg" alt="" />
+        </div>
+        <div class="gallery-cards">
+          <div>
+            <img src="./images/card2.1.jpeg" alt="" />
+          </div>
+          <div>
+            <img src="./images/card2.2.jpeg" alt="" />
+          </div>
+          <div>
+            <img src="./images/card2.3.jpeg" alt="" />
+          </div>
+          <div>
+            <img src="./images/card2.4.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="./images/card3.jpeg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!--Services-->
+    <section class="services" id="services">
+      <div class="services-flex">
+        <div class="services-cards">
+          <div>
+            <img src="./images/first_card.jpeg" alt="Hair styling" />
+            <p>Hair styling</p>
+          </div>
+          <div>
+            <img src="./images/second_card.jpeg" alt="Beard trimming" />
+            <p>Beard trimming</p>
+          </div>
+          <div>
+            <img src="./images/third_card.jpeg" alt="Hair Straightening" />
+            <p>Hair Straightening</p>
+          </div>
+          <div>
+            <img src="./images/fourth_card.jpeg" alt="Smooth Shave" />
+            <p>Smooth Shave</p>
+          </div>
+        </div>
+        <div class="services-background">
+          <img src="./images/services_background.jpeg" alt="Barber photo" />
+        </div>
+      </div>
+    </section>
     <!--Section Team-->
-    <section class="team">
+    <section class="team container" id="team">
       <h1 class="heading">Meet our highly skilled experts</h1>
       <div class="team-members">
         <div class="team-members_card">
@@ -81,7 +145,7 @@
       </div>
     </section>
     <!--Section Contact us-->
-    <section class="contact">
+    <section class="contact container" id="contact">
       <div class="contact_flex">
         <div class="contact_form">
           <h2 class="heading">Get in touch with Us and send a Message</h2>
@@ -122,7 +186,7 @@
         <address>
           <ul>
             <li>
-              <a href="malito: kumarpratiyush1405@gmail.com">
+              <a href="malito:kumarpratiyush1405@gmail.com">
                 <span class="schedule-heading">Email :</span>
                 kumarpratiyush1405@gmail.com</a
               >
@@ -143,16 +207,14 @@
         </address>
         <div class="schedule">
           <ul>
-            <h3 class="schedule-heading">Opening Hours</h3>
+            <li class="schedule-heading">Opening Hours</li>
             <li>Monday - Friday : 10:00 am - 05:00 pm</li>
             <li>Saturday : 10:00 am - 02:00 pm</li>
           </ul>
         </div>
         <div class="contact-social">
           <ul class="social-link">
-            <li>
-              <h3 class="schedule-heading">Connect With Us On</h3>
-            </li>
+            <li class="schedule-heading">Connect With Us On</li>
             <li class="social-link_item">Instagram</li>
             <li class="social-link_item">Facebook</li>
             <li class="social-link_item">Twitter</li>

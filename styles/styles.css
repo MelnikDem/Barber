@@ -1,4 +1,14 @@
-
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 129px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
 ul{
     list-style: none;
 }
@@ -7,28 +17,35 @@ header {
     font-weight: 700;
     font-style: italic;
     font-size: 36px;
-    line-height: 44px;
+    line-height: 1.2;
     color: #fff;
 }
 .heading{
     font-family: 'Rosario', sans-serif;
     font-weight: 700;
     font-size: 86px;
-    line-height: 116px;
+    line-height: 1.3;
     color: #171717;
     text-align: center;
     text-transform: capitalize;
 }
 .header-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .logo{
     flex-basis: 10%;
+    flex-shrink: 0;
 }
 .header-nav{
     flex-basis: 90%;
+    flex-shrink: 1;
     background-color: black;
 }
 .header-nav ul:first-of-type{
@@ -36,10 +53,57 @@ header {
     justify-content: flex-end;
 }
 .header-nav ul:first-of-type > li{
-    margin-right: 40px;
+    margin-right: 1em;
     padding: 5px;
 }
+/* Section Gallery */
+.gallery-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
+    padding-top: 50px;
+}
+.gallery-cards{
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.gallery-cards img{
+    width: 330px;
+}
+/* Section Services */
+.services{
+    padding-top: 129px;
+}
+.services-flex{
+    display: flex;
+    justify-content: space-between;
+
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+}
+.services-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding-top: 3em;
+    text-align: center;
+}
+.services-cards div{
+    width: 280px;
+}
+.services-cards p{
+    margin: 0;
+}
+.services-background{
+    flex-shrink: 1;
+}
 /* Section Team */
 .team{
     margin-top: 50px;
@@ -89,7 +153,7 @@ img{
 
     font-weight: 400;
     font-size: 48px;
-    line-height: 62px;
+    line-height: 1.3;
 }
 .team-members_card:first-of-type .overlay-text{
     padding: 0 20%;
@@ -101,7 +165,7 @@ img{
 /* Section Contact us */
 .contact .heading{
     font-size: 64px;
-    line-height: 77px;
+    line-height: 1.2;
 
     margin-top: 0;
 }
@@ -144,10 +208,10 @@ img{
 .contact_infomation{
     display: flex;
     justify-content: space-around;
-    margin-top: 70px;
+    margin-top: 50px;
 
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 600;   
+    font-size: calc(30px - .5vw);
     font-family: italic;
 }
 address a {
@@ -159,8 +223,7 @@ address a {
 }
 .schedule-heading{
     font-weight: 700;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 26px;
 }
 
 /* Social block */
@@ -168,11 +231,31 @@ address a {
 .social-link_item::before{
     content: '';
     display: inline-block;
-    width: 26px;
-    height: 26px;
+    width: 20px;
+    height: 20px;
     background-size: contain;
 }
-
 .social-link_item:nth-child(2)::before{
     background-image: url(../images/insta.svg);   
+    margin-right: 5px;
+    background-repeat: no-repeat;
+}
+.social-link_item:nth-child(3)::before{
+    background-image: url(../images/facebook.svg);
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+
+    position: relative;
+    top: 5px;
+    left: -3px;
+}
+.social-link_item:last-child::before{
+    background-image: url(../images/twitter.svg);
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    
+    position: relative;
+    top: 3px;
 }
