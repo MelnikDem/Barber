@@ -1,0 +1,188 @@
+
+ul{
+    list-style: none;
+}
+header {
+    font-family: 'Rosario', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 44px;
+    color: #fff;
+}
+.heading{
+    font-family: 'Rosario', sans-serif;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 116px;
+    color: #171717;
+    text-align: center;
+    text-transform: capitalize;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    flex-basis: 10%;
+}
+.header-nav{
+    flex-basis: 90%;
+    background-color: black;
+}
+.header-nav ul:first-of-type{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-nav ul:first-of-type > li{
+    margin-right: 40px;
+    padding: 5px;
+}
+
+/* Section Team */
+.team{
+    margin-top: 50px;
+}
+.team h1{
+    margin: 0;
+}
+.team-members{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.team-members_card{
+    margin: 0 30px;
+    position: relative;
+    overflow: hidden; 
+}
+img{
+    width: 100%;
+}
+.team-members_img{
+    border-radius: 40px;
+}
+.team-members > .heading{
+    padding: 0 auto;
+}
+.overlay{
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(163, 83, 10, 0.7);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transform: translateY(105%);
+    transition: transform 200ms cubic-bezier(.17, .67, .83, .67);
+}
+.overlay-text{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    color: #fff;
+    padding: 0 30%;
+
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+}
+.team-members_card:first-of-type .overlay-text{
+    padding: 0 20%;
+}
+.team-members_card:hover .overlay{
+    transform: translateY(0);
+}
+
+/* Section Contact us */
+.contact .heading{
+    font-size: 64px;
+    line-height: 77px;
+
+    margin-top: 0;
+}
+.contact_flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact_form{
+    width: 50%;
+}
+.conatct_map{
+    width: 40%;
+}
+.contact_form form{
+    background-color: #E5E5E5;
+    padding: 20px;
+    overflow: hidden;
+}
+.contact_form > form div:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact_form > form div:not(:last-child){
+    margin-bottom: 10px;
+}
+.contact-input{
+    min-width: 300px;
+    max-width: 450px;
+    height: 35px;
+    padding: 15px;
+}
+.contact_area{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+}
+.contact_infomation{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+
+    font-weight: 600;
+    font-size: 30px;
+    font-family: italic;
+}
+.contact_infomation ul, h3{
+    margin: 0;
+}
+.schedule-heading{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+}
+address a{
+    display: inline-block;
+    color: black;
+}
+.contact-social{
+    position: relative;
+}
+.social-link > li{
+    display: block;
+}
+.social-link > li:nth-child(2)::before{
+    position: absolute;
+    top: 41px;
+    left: 5px;
+    content: url(../images/insta.svg);
+}
+.social-link > li:nth-child(3)::before{
+    position: absolute;
+    top: 74px;
+    left: 0px;
+    content: url(../images/facebook.svg);
+}
+.social-link > li:last-child::before{
+    position: absolute;
+    top: 110px;
+    left: 5px;
+    content: url(../images/twitter.svg);
+}
