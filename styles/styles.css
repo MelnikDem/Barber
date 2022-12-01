@@ -150,6 +150,10 @@ img{
     font-size: 30px;
     font-family: italic;
 }
+address a {
+    display: inline-block;
+    color: black;
+}
 .contact_infomation ul, h3{
     margin: 0;
 }
@@ -158,31 +162,17 @@ img{
     font-size: 30px;
     line-height: 40px;
 }
-address a{
+
+/* Social block */
+
+.social-link_item::before{
+    content: '';
     display: inline-block;
-    color: black;
+    width: 26px;
+    height: 26px;
+    background-size: contain;
 }
-.contact-social{
-    position: relative;
-}
-.social-link > li{
-    display: block;
-}
-.social-link > li:nth-child(2)::before{
-    position: absolute;
-    top: 41px;
-    left: 5px;
-    content: url(../images/insta.svg);
-}
-.social-link > li:nth-child(3)::before{
-    position: absolute;
-    top: 74px;
-    left: 0px;
-    content: url(../images/facebook.svg);
-}
-.social-link > li:last-child::before{
-    position: absolute;
-    top: 110px;
-    left: 5px;
-    content: url(../images/twitter.svg);
+
+.social-link_item:nth-child(2)::before{
+    background-image: url(../images/insta.svg);   
 }
