@@ -92,6 +92,42 @@ header {
     padding: 10px;
 }
 .left-cards{
+    animation: move_left 1s cubic-bezier(.17, .67, .83, .67) 0s 1 forwards;
+}
+.right-cards{
+    animation: move_right 1s cubic-bezier(.17, .67, .83, .67) 0s 1 forwards;
+}
+.gallery-card:first-child {
+
+    animation: move_left 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    opacity: 1;
+}
+
+.gallery-card:last-child {
+    animation: move_right 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+}
+
+@keyframes move_left {
+    from {
+        transform: translateX(-50vw)
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes move_right {
+    from {
+        transform: translateX(+50vw)
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+/*CSS tranformation with body hover*/
+/*.left-cards{
     transform: translateX(-50vw);
 }
 body:hover .left-cards{
@@ -104,8 +140,8 @@ body:hover .left-cards{
 body:hover .right-cards {
     transform: translateX(0);
     transition: all 1s ease-in;
-}
-.gallery-card:first-child{
+}*/
+/*.gallery-card:first-child{
     transform: translateX(-25vw);
 }
 .gallery-card:last-child {
@@ -118,12 +154,9 @@ body:hover .gallery-card:first-child {
 body:hover .gallery-card:last-child {
     transform: translateX(0);
     transition: all 1s ease-in 1s;
-}
+}*/
 
 /* Section Services */
-.services{
-    padding-top: 129px;
-}
 .services-flex{
     display: flex;
     justify-content: space-between;
@@ -141,9 +174,25 @@ body:hover .gallery-card:last-child {
 
     padding-top: 2em;
     text-align: center;
+
+    animation-name: rotation-1;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite ;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+    transform-origin: center
 }
-.services-cards div{
+.services-cards_card{
     width: 38%;
+
+    animation-name: rotation-2;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+    transform-origin: center;
 }
 .services-cards p{
     margin: 0;
@@ -151,6 +200,17 @@ body:hover .gallery-card:last-child {
 }
 .services-background{
     flex-shrink: 1;
+}
+/*cards animation 360*/
+@keyframes rotation-1 {
+    0% {
+            transform: rotate(-360deg);
+        }
+}
+@keyframes rotation-2 {
+    0% {
+        transform: rotate(360deg);
+    }
 }
 /* Section Team */
 .team{
