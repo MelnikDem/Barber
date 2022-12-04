@@ -184,7 +184,7 @@ body:hover .gallery-card:last-child {
     transform-origin: center
 }
 .services-cards_card{
-    width: 38%;
+    width: 36%;
 
     animation-name: rotation-2;
     animation-duration: 5s;
@@ -266,8 +266,27 @@ img{
 .team-members_card:first-of-type .overlay-text{
     padding: 0 20%;
 }
+/*overlay text team-card*/
 .team-members_card:hover .overlay{
     transform: translateY(0);
+}
+.first:hover ~ .team-members_card {
+    filter: grayscale(var(--value, 100%));
+}
+/*2nd card*/
+.second:hover ~ .team-members_card{
+    filter: grayscale(var(--value, 100%));
+}
+.second:hover .team-members > div:first-of-type {
+    filter: grayscale(var(--value, 100%));
+}
+/* 3rd card*/
+.third:hover .team-members_card:not(nth-child(3)){
+    filter: grayscale(var(--value, 100%));
+}
+/*4th card*/
+.fourth:hover .team-members_card:not(:last-child){
+    filter: grayscale(var(--value, 100%));
 }
 
 /* Section Contact us */
