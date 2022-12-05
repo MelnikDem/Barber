@@ -100,7 +100,6 @@ header {
 .gallery-card:first-child {
 
     animation: move_left 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
-    opacity: 1;
 }
 
 .gallery-card:last-child {
@@ -270,22 +269,20 @@ img{
 .team-members_card:hover .overlay{
     transform: translateY(0);
 }
-.first:hover ~ .team-members_card {
+/* 1st card*/
+.team-members_card:hover ~ .team-members_card {
     filter: grayscale(var(--value, 100%));
 }
 /*2nd card*/
-.second:hover ~ .team-members_card{
-    filter: grayscale(var(--value, 100%));
-}
-.second:hover .team-members > div:first-of-type {
+.team-members_card:hover .team-members_card{
     filter: grayscale(var(--value, 100%));
 }
 /* 3rd card*/
-.third:hover .team-members_card:not(nth-child(3)){
+.team-members_card:hover .team-members_card:not(nth-child(3)){
     filter: grayscale(var(--value, 100%));
 }
 /*4th card*/
-.fourth:hover .team-members_card:not(:last-child){
+.team-members_card:hover .team-members_card:not(:last-child){
     filter: grayscale(var(--value, 100%));
 }
 
