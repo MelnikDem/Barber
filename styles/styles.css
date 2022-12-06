@@ -265,27 +265,17 @@ img{
 .team-members_card:first-of-type .overlay-text{
     padding: 0 20%;
 }
+.team-members:hover .team-members_card{
+    filter: grayscale(var(--value, 100%));
+    /*filter: brightness(0.5);*/
+}
+.team-members .team-members_card:hover{
+    filter: grayscale(var(--value, 0%));
+}
 /*overlay text team-card*/
 .team-members_card:hover .overlay{
     transform: translateY(0);
 }
-/* 1st card*/
-.team-members_card:hover ~ .team-members_card {
-    filter: grayscale(var(--value, 100%));
-}
-/*2nd card*/
-.team-members_card:hover .team-members_card{
-    filter: grayscale(var(--value, 100%));
-}
-/* 3rd card*/
-.team-members_card:hover .team-members_card:not(nth-child(3)){
-    filter: grayscale(var(--value, 100%));
-}
-/*4th card*/
-.team-members_card:hover .team-members_card:not(:last-child){
-    filter: grayscale(var(--value, 100%));
-}
-
 /* Section Contact us */
 .contact .heading{
     font-size: 64px;
@@ -309,7 +299,7 @@ img{
     padding: 20px;
     overflow: hidden;
 }
-.contact_form > form div:first-child{
+.contact_form > form div:first-of-type{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -318,7 +308,7 @@ img{
     margin-bottom: 10px;
 }
 .contact-input{
-    min-width: 300px;
+    min-width: 280px;
     max-width: 450px;
     height: 35px;
     padding: 15px;
@@ -350,7 +340,7 @@ address a {
     font-size: 26px;
 }
 
-/* Social block */
+/* Footer social block */
 
 .social-link_item::before{
     content: '';
