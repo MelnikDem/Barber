@@ -99,11 +99,11 @@ header {
 }
 .gallery-card:first-child {
 
-    animation: move_left 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    animation: move_left-2 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
 }
 
 .gallery-card:last-child {
-    animation: move_right 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    animation: move_right-2 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
 }
 
 @keyframes move_left {
@@ -123,6 +123,25 @@ header {
 
     to {
         transform: translateX(0);
+    }
+}
+/*New animation*/
+@keyframes move_left-2 {
+    from {
+        transform: translateX(-100vw)
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+@keyframes move_right-2 {
+    from {
+        transform: translateX(+100vw)
+    }
+
+    to {
+        transform: translate(0);
     }
 }
 /*CSS tranformation with body hover*/
@@ -183,7 +202,7 @@ body:hover .gallery-card:last-child {
     transform-origin: center
 }
 .services-cards_card{
-    width: 36%;
+    width: 35%;
 
     animation-name: rotation-2;
     animation-duration: 5s;
@@ -310,7 +329,7 @@ img{
 .contact-input{
     min-width: 280px;
     max-width: 450px;
-    height: 35px;
+    height: 36px;
     padding: 15px;
 }
 .contact_area{
