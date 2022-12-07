@@ -72,13 +72,14 @@ header {
     align-items: center;
 
     padding-top: 50px;
+    overflow: hidden;
 }
 .gallery-card{
     max-width: 300px;
 }
-.gallery-card >div{
+/*.gallery-card > div{
     max-width: 300px;
-}
+}*/
 .gallery-cards{
     flex-shrink: 2;
     flex-basis: 50%;
@@ -88,7 +89,7 @@ header {
     /* gap: 25px; */
 }
 .gallery-cards > div{
-    max-width: 300px;
+    max-width: 302px;
     padding: 10px;
 }
 .left-cards{
@@ -187,7 +188,8 @@ body:hover .gallery-card:last-child {
 .services-cards{
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 2;
+    flex-basis: 45%;
+    /*flex-shrink: 2;*/
     justify-content: space-evenly;
 
     padding-top: 2em;
@@ -217,7 +219,8 @@ body:hover .gallery-card:last-child {
     padding-bottom: 10px;
 }
 .services-background{
-    flex-shrink: 1;
+    /*flex-shrink: 1;*/
+    flex-basis: 50%;
 }
 /*cards animation 360*/
 @keyframes rotation-1 {
