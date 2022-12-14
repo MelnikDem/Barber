@@ -151,23 +151,34 @@
       <div class="contact_flex">
         <div class="contact_form">
           <h2 class="heading">Get in touch with Us and send a Message</h2>
-          <form action="">
+          <form method="POST" action="./index.php" autocomplete="on">
             <div>
               <div>
-                <input class="contact-input" type="text" placeholder="Name" />
+                <input
+                  class="contact-input"
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                />
               </div>
               <div>
-                <input class="contact-input" type="email" placeholder="Email" />
+                <input
+                  class="contact-input"
+                  name="mail"
+                  type="email"
+                  placeholder="Email"
+                />
               </div>
             </div>
             <div>
               <textarea
                 class="contact_area"
-                name=""
-                id=""
+                name="commnet"
                 placeholder="Messsage"
-                wrap="off"
               ></textarea>
+              <div>
+                <button class="form_btn">Ok</button>
+              </div>
             </div>
           </form>
         </div>
