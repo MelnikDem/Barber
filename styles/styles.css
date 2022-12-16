@@ -315,7 +315,6 @@ img{
 .contact_infomation{
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
 
     font-weight: 600;   
     font-size: calc(30px - .5vw);
@@ -333,8 +332,6 @@ address a {
     font-weight: 700;
     font-size: 26px;
 }
-
-/* Footer social block */
 
 .social-link_item::before{
     content: '';
