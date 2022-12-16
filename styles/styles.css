@@ -1,7 +1,7 @@
 .container{
     width: 100%;
     max-width: 1920px;
-    min-width: 1280px;
+    min-width: 1290px;
     margin: 0 auto;
     padding-top: 129px;
     padding-right: 3%;
@@ -77,18 +77,13 @@ header {
 .gallery-card{
     max-width: 300px;
 }
-/*.gallery-card > div{
-    max-width: 300px;
-}*/
 .gallery-cards{
-    flex-shrink: 2;
     flex-basis: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* gap: 25px; */
 }
-.gallery-cards > div{
+.gallery-cards__card{
     max-width: 302px;
     padding: 10px;
 }
@@ -145,35 +140,6 @@ header {
         transform: translate(0);
     }
 }
-/*CSS tranformation with body hover*/
-/*.left-cards{
-    transform: translateX(-50vw);
-}
-body:hover .left-cards{
-    transform: translateX(0);
-    transition: all 1s ease-in;
-}
-.right-cards{
-    transform: translateX(+50vw);
-}
-body:hover .right-cards {
-    transform: translateX(0);
-    transition: all 1s ease-in;
-}*/
-/*.gallery-card:first-child{
-    transform: translateX(-25vw);
-}
-.gallery-card:last-child {
-    transform: translateX(+25vw);
-}
-body:hover .gallery-card:first-child {
-    transform: translateX(0);
-    transition: all 1s ease-in 1s;
-}
-body:hover .gallery-card:last-child {
-    transform: translateX(0);
-    transition: all 1s ease-in 1s;
-}*/
 
 /* Section Services */
 .services-flex{
@@ -248,9 +214,9 @@ body:hover .gallery-card:last-child {
     margin-bottom: 50px;
 }
 .team-members_card{
-    margin: 0 30px;
     position: relative;
     overflow: hidden; 
+    margin: 0 30px;
 }
 img{
     width: 100%;
@@ -289,7 +255,6 @@ img{
 }
 .team-members:hover .team-members_card{
     filter: grayscale(var(--value, 100%));
-    /*filter: brightness(0.5);*/
 }
 .team-members .team-members_card:hover{
     filter: grayscale(var(--value, 0%));
@@ -362,6 +327,7 @@ address a {
 }
 .contact_infomation ul, h3{
     margin: 0;
+    padding: 0;
 }
 .schedule-heading{
     font-weight: 700;
@@ -400,4 +366,132 @@ address a {
     
     position: relative;
     top: 3px;
+}
+
+@media screen and (max-width:992px) {
+    .gallery .gallery-flex {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .gallery .gallery-cards {
+        width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .gallery-card:first-child {
+        position: relative;
+        top: 0;
+        left: -170px;
+    }
+
+    .gallery-card:last-child {
+        position: absolute;
+        top: 50px;
+        right: 305px;
+    }
+
+    .gallery .gallery-card:first-child {
+        animation: move_left-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    }
+
+    .gallery .gallery-card:last-child {
+        animation: move_right-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    }
+
+    .services .services-flex {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .services .services-background {
+        max-width: 50%;
+        margin-bottom: 45px;
+    }
+
+    .services .services-cards {
+        max-width: 50%;
+    }
+
+    .team .team-members {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contact .contact_flex {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .conatct_map{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 768px;
+        /* min-height: 100vh; */
+    }
+    .gallery .gallery-flex{
+        flex-direction: column-reverse;
+    }
+    .gallery .gallery-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery .gallery-cards__card{
+        max-width: 100%;
+    }
+    .gallery .gallery-card{
+        max-width: 465px;
+    }
+    .gallery-card:first-child {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .gallery-card:last-child {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .gallery .gallery-card:first-child { 
+        animation: move_left-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    } 
+    .gallery .gallery-card:last-child {
+        animation: move_right-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+    }
+    .services .services-flex{
+        justify-content: center;
+    }
+    .services .services-background{
+        display: none;
+    }
+    .services .services-cards{
+        flex-basis: 65%;
+    }
+    .team .team-members{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .team-members_card{
+        max-width: 100%;
+    }
+    .team__heading{
+        font-size: 75px;
+    }
+    .contact .contact_flex{
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+}
+@media screen and (min-width:1620px) {
+    .container {
+        padding-right: 14%;
+        padding-left: 14%;
+        }
+    
 }
