@@ -365,8 +365,21 @@ address a {
     position: relative;
     top: 3px;
 }
-
+/* 992px */
 @media screen and (max-width:992px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    .header-container{
+        min-width: 768px;
+        max-width: 990px;
+        font-size: 20px;
+    }
+    .container{
+        min-width: 768px;
+        max-width: 990px;
+        padding-top: 75px;
+    }
     .gallery .gallery-flex {
         position: relative;
         flex-direction: column;
@@ -391,7 +404,7 @@ address a {
     .gallery-card:last-child {
         position: absolute;
         top: 48px;
-        right: 310px;
+        right: 155px;
     }
 
     .gallery .gallery-card:first-child {
@@ -405,61 +418,85 @@ address a {
     .services .services-flex {
         flex-direction: column-reverse;
         align-items: center;
+        font-size: 17px;
     }
 
     .services .services-background {
-        max-width: 50%;
+        max-width: 65%;
         margin-bottom: 45px;
     }
 
     .services .services-cards {
-        max-width: 50%;
+        max-width: 60%;
     }
 
     .team .team-members {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
     }
-
+    .team .team-members_card{
+        max-width: 290px;
+        margin: 0 15px;
+    }
+    .team__heading{
+        font-size: 4rem;
+    }
     .contact .contact_flex {
         flex-direction: column;
         row-gap: 20px;
     }
-    .conatct_map{
-        width: 50%;
+    .conatct_map, .contact_form{
+        width: 65%;
+    }
+    .contact .heading{
+        font-size: 3rem;
+    }
+    .contact_infomation{
+        font-size: 1rem;
+    }
+    .schedule-heading{
+        font-size: 20px;
     }
 }
-
+ /* 768px */
 @media screen and (max-width:768px) {
+    html,body
+    {
+        overflow-x: hidden;
+    }
     .container{
         max-width: 768px;
-        /* min-height: 100vh; */
+        padding-top: 75px;
     }
     .gallery .gallery-flex{
         flex-direction: column;
+        max-height: 100vh;
     }
     .gallery .gallery-cards{
         flex-direction: column;
         align-items: center;
     }
-    .gallery .gallery-cards__card{
-        max-width: 100%;
+    .gallery-card{
+        max-width: 115px;
     }
-    .gallery .gallery-card{
-        min-width: 465px;
+    .gallery-cards__card{
+        max-width: 120px;
+        padding: 0 0 5px 0;
     }
     .gallery-card:first-child {
         position: relative;
         top: 0;
         left: 0;
         order: -2;
+        margin-bottom: 5px;
     }
     .gallery-card:last-child {
         position: relative;
         top: 0;
         right: 0;
         order: -1;
+        margin-bottom: 5px;
     }
     @keyframes move_left {
         from {
@@ -495,12 +532,16 @@ address a {
     }
     .services .services-flex{
         justify-content: center;
+        padding-bottom: 20px;
     }
     .services .services-background{
         display: none;
     }
     .services .services-cards{
         flex-basis: 65%;
+    }
+    .team__heading{
+        font-size: 2.5rem;
     }
     .team .team-members{
         flex-direction: column;
@@ -509,12 +550,18 @@ address a {
     .team-members_card{
         max-width: 100%;
     }
-    .team__heading{
-        font-size: 75px;
+    .contact .heading{
+        font-size: 2rem;
     }
     .contact .contact_flex{
         flex-direction: column-reverse;
         row-gap: 20px;
+    }
+    .contact-input{
+        min-width: 200px;
+    }
+    .schedule-heading{
+        font-size: 17px;
     }
 }
 @media screen and (min-width:1620px) {
