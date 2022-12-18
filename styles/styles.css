@@ -121,7 +121,7 @@ header {
         transform: translateX(0);
     }
 }
-/*New animation*/
+/*1st left/right card animation*/
 @keyframes move_left-2 {
     from {
         transform: translateX(-100vw)
@@ -264,16 +264,16 @@ img{
     transform: translateY(0);
 }
 /* Section Contact us */
-.contact .heading{
-    font-size: 64px;
-    line-height: 1.2;
-
-    margin-top: 0;
-}
 .contact_flex{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.contact .heading {
+    font-size: 64px;
+    line-height: 1.2;
+
+    margin-top: 0;
 }
 .contact_form{
     width: 50%;
@@ -312,9 +312,10 @@ img{
     bottom: 25px;
     right: 22px;
 }
+ /* Footer */
 .contact_infomation{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
 
     font-weight: 600;   
     font-size: calc(30px - .5vw);
@@ -375,19 +376,22 @@ address a {
         width: 750px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
+    }
+    .gallery-cards__card {
+        max-width: 320px;
     }
 
     .gallery-card:first-child {
         position: relative;
         top: 0;
-        left: -170px;
+        left: -162px;
     }
 
     .gallery-card:last-child {
         position: absolute;
-        top: 50px;
-        right: 305px;
+        top: 48px;
+        right: 310px;
     }
 
     .gallery .gallery-card:first-child {
@@ -433,7 +437,7 @@ address a {
         /* min-height: 100vh; */
     }
     .gallery .gallery-flex{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .gallery .gallery-cards{
         flex-direction: column;
@@ -443,23 +447,51 @@ address a {
         max-width: 100%;
     }
     .gallery .gallery-card{
-        max-width: 465px;
+        min-width: 465px;
     }
     .gallery-card:first-child {
         position: relative;
         top: 0;
         left: 0;
+        order: -2;
     }
     .gallery-card:last-child {
         position: relative;
         top: 0;
         right: 0;
+        order: -1;
+    }
+    @keyframes move_left {
+        from {
+            transform: translateX(-100vw)
+        }
+        
+        to {
+            transform: translate(0);
+        }
+    }
+
+    @keyframes move_right {
+        from {
+            transform: translateX(+100vw)
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+    .left-cards {
+        animation: move_left 2s cubic-bezier(.17, .67, .83, .67) 0s 1 forwards;
+    }
+    
+    .right-cards {
+        animation: move_right 2s cubic-bezier(.17, .67, .83, .67) 0s 1 forwards;
     }
     .gallery .gallery-card:first-child { 
-        animation: move_left-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+        animation: move_left-2 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
     } 
     .gallery .gallery-card:last-child {
-        animation: move_right-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+        animation: move_right-2 2s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
     }
     .services .services-flex{
         justify-content: center;
