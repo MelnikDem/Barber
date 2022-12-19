@@ -1,4 +1,11 @@
-
+html, body{
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1440px;
+    min-width: 990px;
+    margin: 0 auto;
+}
 .summary{
     display: grid;
     grid-template-columns: minmax(250px, 2fr) 1fr 1fr;
