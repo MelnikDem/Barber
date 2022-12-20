@@ -545,6 +545,9 @@ address a {
         flex-direction: column-reverse;
         row-gap: 20px;
     }
+    .contact_form form div:first-of-type{
+        flex-wrap: nowrap;
+    }
     .contact-input{
         min-width: 200px;
     }
