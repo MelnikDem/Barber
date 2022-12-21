@@ -370,23 +370,24 @@ address a {
 /* 992px */
 @media screen and (max-width:992px) {
     .header-container{
-        min-width: 768px;
+        min-width: 769px;
         max-width: 990px;
         font-size: 20px;
     }
     .container{
-        min-width: 768px;
+        min-width: 769px;
         max-width: 990px;
         padding-top: 75px;
     }
     .gallery-flex {
-        position: relative;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
     }
 
     .gallery-cards {
         order: 3;
-        width: 750px;
+        flex-basis: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -404,11 +405,11 @@ address a {
     }
 
     .gallery-card:first-child {
-        animation: move_left-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+        animation: move_left-2 1s cubic-bezier(.17, .67, .83, .67) 1 forwards;
     }
 
     .gallery-card:last-child {
-        animation: move_right-2 1s cubic-bezier(.17, .67, .83, .67) 0.1s 1 forwards;
+        animation: move_right-2 1s cubic-bezier(.17, .67, .83, .67) 1 forwards;
     }
 
     .services-flex {
@@ -426,12 +427,12 @@ address a {
         max-width: 60%;
     }
 
-    .team .team-members {
+    .team-members {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
-    .team .team-members_card{
+    .team-members_card{
         max-width: 290px;
         margin: 0 15px;
     }
@@ -444,6 +445,9 @@ address a {
     }
     .conatct_map, .contact_form{
         width: 65%;
+    }
+    .contact-input{
+        min-width: 220px;
     }
     .heading{
         font-size: 3rem;
@@ -525,9 +529,6 @@ address a {
     .services .services-background{
         display: none;
     }
-    .services .services-cards{
-        flex-basis: 70%!important;
-    }
     .team__heading{
         font-size: 2.5rem;
     }
@@ -562,7 +563,8 @@ address a {
 }
 @media screen and (min-width:1620px) {
     .container{
-        padding-right: 10%;
-        padding-left: 10%;
+        width: 1680px;
+        padding-right: 12%;
+        padding-left: 12%;
     }
 }
