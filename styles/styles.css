@@ -546,6 +546,9 @@ address a {
         flex-direction: column-reverse;
         row-gap: 20px;
     }
+    .contact_form form div:first-of-type{
+        flex-wrap: nowrap;
+    }
     .contact-input{
         min-width: 200px;
     }
@@ -563,8 +566,8 @@ address a {
 }
 @media screen and (min-width:1620px) {
     .container{
-        width: 1680px;
         padding-right: 12%;
         padding-left: 12%;
+        max-width: 1680px;
     }
 }
