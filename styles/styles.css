@@ -367,6 +367,62 @@ address a {
     position: relative;
     top: 3px;
 }
+/* scree 993px - 1289px*/
+@media screen and (min-width:993px) and (max-width:1289px) {
+    .container {
+        min-width: 993px;
+        max-width: 1289px;
+    }
+
+    .header-container {
+        font-size: 19px;
+    }
+
+    .gallery-flex {
+        justify-content: center;
+    }
+
+    .gallery-cards__card {
+        max-width: 225px;
+    }
+
+    .gallery-card {
+        max-width: 235px;
+    }
+
+    .services-flex {
+        justify-content: flex-end;
+        font-size: 20px;
+    }
+
+    .services-cards {
+        margin-left: 5px;
+        margin-right: 75px;
+    }
+    .team__heading {
+        font-size: 70px;
+    }
+    .team-members_card{
+        margin: 0 15px;
+    }
+    .overlay{
+        bottom: 3px;
+    }
+    .overlay-text{
+        font-size: 40px;
+    }
+    .contact .heading {
+        font-size: 50px;
+    }
+
+    .contact-input {
+        min-width: 210px;
+    }
+
+    .contact_infomation {
+        font-size: calc(22px - .5vw)
+    }
+}
 /* 992px */
 @media screen and (max-width:992px) {
     .header-container{
@@ -435,6 +491,9 @@ address a {
     .team-members_card{
         max-width: 290px;
         margin: 0 15px;
+    }
+    .team-members_card:first-of-type .overlay-text {
+        padding: 0 16%;
     }
     .team__heading{
         font-size: 4rem;
@@ -539,6 +598,9 @@ address a {
     .team .team-members_card{
         max-width: 100%;
     }
+    .team-members_card:first-of-type .overlay-text {
+        padding: 0 27%;
+    }
     .contact .heading{
         font-size: 2rem;
     }
@@ -564,6 +626,7 @@ address a {
         gap: 10px;
     }
 }
+
 @media screen and (min-width:1620px) {
     .container{
         padding-right: 12%;
